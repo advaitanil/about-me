@@ -5,6 +5,97 @@
   padding: 0;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
+/* ── Navbar ── */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.85rem 2rem;
+  background: #4f46e5;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.nav-logo {
+  color: #fff;
+  font-weight: 700;
+  font-size: 1.1rem;
+  text-decoration: none;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+}
+
+.nav-links a {
+  color: rgba(255, 255, 255, 0.85);
+  text-decoration: none;
+  font-size: 0.95rem;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+
+.nav-links a:hover {
+  color: #fff;
+}
+
+.nav-toggle {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.25rem;
+  margin: 0;
+}
+
+.nav-toggle span {
+  display: block;
+  width: 22px;
+  height: 2px;
+  background: #fff;
+  border-radius: 2px;
+  transition: transform 0.2s, opacity 0.2s;
+}
+
+@media (max-width: 480px) {
+  .nav-toggle {
+    display: flex;
+  }
+
+  .nav-links {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    gap: 0;
+    background: #4338ca;
+    padding: 0.5rem 0;
+  }
+
+  .nav-links.open {
+    display: flex;
+  }
+
+  .nav-links li a {
+    display: block;
+    padding: 0.75rem 2rem;
+  }
+}
+
 /* ── Base ── */
 body {
   font-family: 'Segoe UI', system-ui, sans-serif;
@@ -12,6 +103,7 @@ body {
   color: #1a1a2e;
   line-height: 1.7;
   padding: 2rem;
+  padding-top: 5rem;
 }
 
 /* ── Layout ── */
@@ -49,6 +141,13 @@ h2 {
   object-position: center top;
   border: 4px solid #4f46e5;
   margin-bottom: 2rem;
+}
+
+/* ── Scroll offset for fixed navbar ── */
+#about,
+#skills,
+#contact {
+  scroll-margin-top: 4rem;
 }
 
 /* ── Sections ── */

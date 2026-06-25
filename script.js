@@ -28,3 +28,15 @@ console.log("Is 7 even?", isEven(7));
 function handleGreetClick() {
   alert(greet(name));
 }
+
+// Nav toggle for mobile
+function toggleNav() {
+  document.querySelector('.nav-links').classList.toggle('open');
+}
+
+// Close mobile nav when a link is clicked
+document.querySelectorAll('.nav-links a').forEach(link => {
+  link.addEventListener('click', () => {
+    document.querySelector('.nav-links').classList.remove('open');
+  });
+});

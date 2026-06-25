@@ -7,6 +7,20 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+  <nav class="navbar">
+    <a href="#" class="nav-logo">Advait Anil</a>
+    <button class="nav-toggle" aria-label="Toggle navigation" onclick="toggleNav()">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+    <ul class="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
   <div class="container">
     <h1>Advait Anil</h1>
 
@@ -16,7 +30,7 @@
       class="avatar"
     />
 
-    <section class="bio">
+    <section id="about" class="bio">
       <h2>About Me</h2>
       <p>
         Hey! I'm Advait, an aspiring full-stack developer currently going through
@@ -26,7 +40,7 @@
       </p>
     </section>
 
-    <section class="skills">
+    <section id="skills" class="skills">
       <h2>Skills I Want to Learn</h2>
       <ul>
         <li>HTML &amp; CSS — building solid, well-structured pages</li>
@@ -41,7 +55,7 @@
 
     <button onclick="handleGreetClick()">Say Hello</button>
 
-    <section class="contact">
+    <section id="contact" class="contact">
       <h2>Contact</h2>
       <p>Feel free to reach out — I'm always open to connecting.</p>
       <ul>

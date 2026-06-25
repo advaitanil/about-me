@@ -17,3 +17,6 @@ Just open `index.html` in your browser. No build step needed.
 - HTML
 - CSS
 - Vanilla JavaScript
+
+## Status
+In Progress
